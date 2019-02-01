@@ -131,7 +131,7 @@ int main(int argc, char *argv[])
             }
         }
     }
-    else if (f < 1.0) // f is 0.5, reduce the size
+    else if (f < 1.0) // f is 0.5, reduce the size , actually it only works when f is 0.5
     {
         // iterate over every other infile's scanlines
         for (int i = 0, new_biHeight = abs(new_bi.biHeight); i < new_biHeight; i++)
