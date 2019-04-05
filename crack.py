@@ -24,7 +24,7 @@ def brute_force(hashedword):
             for z in range(lena):
                 for y in range(lena):
                     for x in range(lena):
-                        if crypt.crypt(str(key), salt) == hashedword:
+                        if crypt.crypt(key, salt) == hashedword:
                             print(key)
                             sys.exit(0)
                         key = lts[x] + key[1:]
