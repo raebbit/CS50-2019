@@ -1,0 +1,24 @@
+/* CSS for 'Survey' */
+html, body
+{
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Ensure content is below navbar */
+div.container-fluid
+{
+    padding-top: 56px;
+}
+
+/* Fill viewport */
+div.container-fluid, div.row, div.col
+{
+    height: 100%;
+}
+
+div.col
+{
+    padding-left: 0;
+    padding-right: 0;
+}
