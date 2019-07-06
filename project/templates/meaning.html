@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Make your own dictionary
+{% endblock %}
+
+{% block main %}
+    <div class="row">
+        <div class="col-md-7">
+            <iframe src="https://dict.naver.com/enendict/#/search?query={{word}}" height="500" width="100%" style="border:none;"></iframe>
+        </div>
+        
+        <div class="col-md-5">
+            <form action="/meaning" method="post">
+                <div class="form-group">
+                    <label for="wordToAdd">Word</label>
+                    <input type="text" class="form-control" name="word" aria-describedby="wordHelp">
+                    <small id="wordHelp" class="form-text text-muted">You should check the spelling before submit.</small>
+                </div>
+                <div class="form-group">
+                    <label for="meaningToAdd">Meaning</label><br>
+                    <textarea cols="50" class="form-control" name="meaning" rows="6" placeholder="Write the meaning of the word in your own words!"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}

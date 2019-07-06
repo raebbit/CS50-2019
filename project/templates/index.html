@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    This is WordNote
+{% endblock %}
+
+{% block main %}
+    <div class="row">
+        <div class="col-md-7">
+            <div class="form-group">
+                <h3>A dictionary, a note and a teacher for you!</h3>
+            </div>
+            <div class="form-group">
+                <p>
+                    With <strong>Search</strong>, you can find the definition and examples of the word you want to learn.<br>
+                    After the research, you can make your own dictionary.
+                </p>
+                <p>
+                    And, you can see your words and their meanings on <strong>My Note</strong>.<br>
+                    You can delete them from the note.
+                </p>
+                <p>
+                    Test is the best way to review! <br>
+                    On <strong>Quiz</strong>, we'll give you a quiz based on your note.<br>
+                    We are gonna keep tracking your scores! You can see the result on this page.
+                </p>
+            </div>
+        </div>
+        
+        <div class="col-md-5">
+            <div class="form-group">
+                <div class="card bg-light text-dark">
+                    <div class="card-body">
+                        <h4 class="card-title">ID : {{card["username"]}}</h4>
+                        <p class="card-text">You've been studying since {{card["first_day"]}}.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <p>You've answered {{corr_rate["quiz_total"]}} quizzes.</p>
+                <p>Your score is  <strong>{{corr_rate["quiz_corr"]}}</strong> / {{corr_rate["quiz_total"]}}</p>
+            </div>
+            <div class="form-group">
+                <div class="progress" style="height:24px">
+                    <div class="progress-bar bg-info" style="width:{{correctness}}%;height:24px">
+                        {{correctness}}% correctness
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </div>
+{% endblock %}

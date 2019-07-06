@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    My Note
+{% endblock %}
+
+{% block main %}
+<form action="/mynote" method="post">
+    <table class="table table-hover">
+        <thead class="thead-dark">
+            <tr>
+                <th>#</th>
+                <th>Word</th>
+                <th>Meaning</th>
+                <th> </th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for word in words %}
+            <tr>
+                <td>{{loop.index}}</td>
+                <td>{{word["word"]}}</td>
+                <td>{{word["meaning"]}}</td>
+                <td>
+                    <button class="btn btn-outline-dark btn-sm" name="delete" value="{{word["id"]}}" type="submit">Delete</button>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</form>
+{% endblock %}
