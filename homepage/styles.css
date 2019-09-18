@@ -1,0 +1,42 @@
+table
+{
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th
+{
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even)
+{
+  background-color: #dddddd;
+}
+
+body
+{
+    text-align: center;
+    background-color:oldlace;
+}
+
+p
+{
+    font-size: 120%;
+}
+
+main
+{
+    background-color: powderblue;
+    color: white;
+    font-size:120%;
+}
+
+h1
+{
+  background-color:powderblue;
+  padding:10px;
+}
